@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Lista</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h1>LISTA</h1>
+		<h:messages />
+
+		<h:dataTable border="1" value="#{multaControllerPedro.lista}" var="multa">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="id" />
+				</f:facet>
+				<h:outputText value="#{multa.id}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Data Multa" />
+				</f:facet>
+				<h:outputText value="#{multa.dataMulta}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="id Infracao" />
+				</f:facet>
+				<h:outputText value="#{multa.infracao.id}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="gravidade Infracao" />
+				</f:facet>
+				<h:outputText value="#{multa.infracao.gravidadeInfracao}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Descricao Infracao" />
+				</f:facet>
+				<h:outputText value="#{multa.infracao.descricacaoInfracao}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Valor Infracao" />
+				</f:facet>
+				<h:outputText value="#{multa.infracao.valorInfracao}" />
+			</h:column>
+
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="id Veiculo" />
+				</f:facet>
+				<h:outputText value="#{multa.veiculo.id}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Gravidade Veiculo" />
+				</f:facet>
+				<h:outputText value="#{multa.veiculo.gravidadeVeiculo}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Descricao Veiculo" />
+				</f:facet>
+				<h:outputText value="#{multa.veiculo.descricaoVeiculo}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="id Motorista" />
+				</f:facet>
+				<h:outputText value="#{multa.motorista.id}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Nome Motorista" />
+				</f:facet>
+				<h:outputText value="#{multa.motorista.nomeMotorista}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="CPF" />
+				</f:facet>
+				<h:outputText value="#{multa.motorista.cpfMotorista}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="CNH" />
+				</f:facet>
+				<h:outputText value="#{multa.motorista.cnhMotorista}" />
+			</h:column>
+
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>
